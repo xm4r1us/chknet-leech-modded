@@ -11,7 +11,7 @@ from datetime import datetime
 # BOT
 CHKNET = "https://web2.chknet.eu/"
 enabled = True
-channel_name = "#unix"
+channel_name = "#ccpower"
 bot_name = "%s%i" % (''.join(random.choices(
     string.ascii_uppercase + string.digits, k=10)), random.randint(0, 9999))
 
@@ -57,12 +57,12 @@ print("[!] Connected with chknet!")
 for channel in channels:
     if channel.get_attribute('data-name') == channel_name:
         channel.click()
-        print("[!] Joined #unix")
+        print("[!] Joined " + channel)
         break
 
 
 # GRAB CC'S
-approved_cc_regex = r"[0-9]{15,16}\s[0-9]{4}\s[0-9]{3,4}\s\-\s.*\s\-\sApproved"
+approved_cc_regex = r"[0-9]{15,16}\s[0-9]{4}\s[0-9]{3,4}\s\-\s.*\s\-\s"
 ccs = []
 
 
